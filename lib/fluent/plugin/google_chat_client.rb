@@ -69,10 +69,10 @@ module Fluent
         chat = Chat::HangoutsChatService.new
         chat.authorization = authorize
         message = Chat::Message.new
-        message.text = params.text
+        message.text = params[:text]
 
         chat.create_space_message(
-            'spaces/%s' % params.space,
+            'spaces/%s' % params[:space],
             message
         )
       end
