@@ -69,7 +69,7 @@ module Fluent
         chat = Chat::HangoutsChatService.new
         chat.authorization = authorize
         message = Chat::Message.new
-        message.text = params[:text]
+        message.text = params[:text].length > 4096 ? params[:text][0...4096] : params[:text]
 
         chat.create_space_message(
             'spaces/%s' % params[:space],
