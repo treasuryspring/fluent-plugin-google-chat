@@ -64,7 +64,7 @@ DESC
       super
 
       if @space
-        @space = URI.unescape(@space) # old version compatibility
+        @space = URI::Parser.new.unescape(@space)
       else
         raise Fluent::ConfigError.new("`space` is required")
       end

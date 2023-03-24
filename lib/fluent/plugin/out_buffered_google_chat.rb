@@ -1,1 +1,1 @@
-/Users/lgabaude/Documents/ts/fluent-plugin-google-chat/lib/fluent/plugin/out_google_chat.rb
+out_google_chat.rb
